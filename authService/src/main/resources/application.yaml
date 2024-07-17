@@ -1,0 +1,18 @@
+
+server:
+  port: 8100
+
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:postgresql://${JDBC_URL:localhost}:5432/dev-server
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:nichakra@1}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
